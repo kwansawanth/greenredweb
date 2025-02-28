@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<<<<<<< HEAD
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Green Flag or Red Flag?</title>
@@ -36,5 +37,71 @@
       </audio>
     </div>
   </div>
+=======
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Flag or Red Flag?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffebf0;
+            color: #333;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            width: 90% ;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #ff66a3;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .result {
+            font-size: 30px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Green Flag or Red Flag?</h1>
+        <p>Describe his action and we'll rate it!</p>
+        <input type="text" id="userInput" placeholder="Type here...">
+        <button onclick="analyzeInput()">Check!</button>
+        <p class="result" id="result"></p>
+    </div>
+    
+    <script>
+        function analyzeInput() {
+            let input = document.getElementById("userInput").value.toLowerCase();
+            let result = document.getElementById("result");
+            
+            if (input.includes("kind") || input.includes("respect") || input.includes("support")) {
+                result.innerHTML = "💚 Green Flag! He’s a keeper!";
+                result.style.color = "green";
+            } else if (input.includes("lie") || input.includes("cheat") || input.includes("ignore")) {
+                result.innerHTML = "🚩 Red Flag! Watch out!";
+                result.style.color = "red";
+            } else {
+                result.innerHTML = "🤔 Hmm... Maybe a yellow flag?";
+                result.style.color = "orange";
+            }
+        }
+    </script>
+>>>>>>> 2da2adc7edd81f109769edea9a8c34048451897c
 </body>
 </html>
