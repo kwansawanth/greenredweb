@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Flag or Red Flag?</title>
-    <link rel="stylesheet" href="../static/css/firstpage.css">
-    <!-- <script src="../static/js/updateDefaults.js"></script> -->
-        
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Flag or Red Flag?</title>
+  <link rel="stylesheet" href="../static/css/index.css">
+  <script src="../static/index.js" defer></script>
 </head>
 <body>
+  <div class="container">
+    <h1 class="title">Green Flag 💚 or <span style="color:red">Red Flag</span>🍓</h1>
+    <input type="text" id="userInput" placeholder="Enter an action...">
+    <button onclick="analyzeInput()">Analyze</button>
+    <p id="result"></p>
     
-    <div class="container">
-        <h1 class="title">
-            Green Flag or <span style="color:red">Red Flag</span>?
-          </h1>          
-        <p class="description">⎛⎝ ≽  >  ⩊  < ≼ ⎠⎞</p>
-        <img src="../static/Pixellance.gif" alt="Pixel Character" class="pixel-character">
-        <br>
-        <h2 class="description">Describe his action and we'll rate it!</h2>
-        <a href="index.html" class="start-button">START</a>
+    <!-- เพิ่ม Audio Player ไว้ด้านล่าง -->
+    <div class="cute-audio-player">
+      <div class="song-info">
+        <h2>ตัดแว่นให้เพื่อนหนูหน่อยค่ะ</h2>
+      </div>
+      <!-- ใส่ controls เพื่อให้แถบเล่นเสียงแสดงขึ้น พร้อมทั้ง autoplay -->
+      <audio id="bgMusic" 
+             src="../static/BACON.mp3" 
+             controls 
+             autoplay>
+        Your browser does not support the audio element.
+      </audio>
     </div>
+  </div>
 </body>
 </html>

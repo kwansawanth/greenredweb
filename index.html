@@ -1,69 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Flag or Red Flag?</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #ffebf0;
-            color: #333;
-            padding: 20px;
-        }
-        .container {
-            max-width: 500px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        input, button {
-            width: 90% ;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 10px;
-            border: 1px solid #ccc;
-        }
-        button {
-            background-color: #ff66a3;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        .result {
-            font-size: 30px;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Flag or Red Flag?</title>
+  <!-- ลิงก์ไปยังไฟล์ CSS -->
+  <link rel="stylesheet" href="../static/css/index.css">
+  <!-- ลิงก์ไปยังไฟล์ JavaScript -->
+  <script src="../static/index.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Green Flag or Red Flag?</h1>
-        <p>Describe his action and we'll rate it!</p>
-        <input type="text" id="userInput" placeholder="Type here...">
-        <button onclick="analyzeInput()">Check!</button>
-        <p class="result" id="result"></p>
-    </div>
+  <div class="container">
+    <!-- ส่วนหัวเรื่อง -->
+    <h1 class="title">Green Flag or <span style="color:red">Red Flag</span>?</h1>
     
-    <script>
-        function analyzeInput() {
-            let input = document.getElementById("userInput").value.toLowerCase();
-            let result = document.getElementById("result");
-            
-            if (input.includes("kind") || input.includes("respect") || input.includes("support")) {
-                result.innerHTML = "💚 Green Flag! He’s a keeper!";
-                result.style.color = "green";
-            } else if (input.includes("lie") || input.includes("cheat") || input.includes("ignore")) {
-                result.innerHTML = "🚩 Red Flag! Watch out!";
-                result.style.color = "red";
-            } else {
-                result.innerHTML = "🤔 Hmm... Maybe a yellow flag?";
-                result.style.color = "orange";
-            }
-        }
-    </script>
+    <!-- ช่องกรอกข้อความและปุ่มวิเคราะห์ -->
+    <input type="text" id="userInput" placeholder="Enter an action...">
+    <button onclick="analyzeInput()">Analyze</button>
+    <p id="result"></p>
+
+    <!-- ส่วน Audio Player -->
+    <div class="cute-audio-player">
+      <div class="song-info">
+        <h2>My Cute Song</h2>
+      </div>
+      <!-- ใส่ controls เพื่อให้มีแถบเล่นเพลง
+           autoplay อาจถูกบล็อก ถ้าอยากให้แน่ใจว่าเล่นได้
+           ควรให้ผู้ใช้กดปุ่ม play เอง หรือใช้ JS ควบคุม -->
+      <audio id="bgMusic" 
+             src="../static/BACON.mp3" 
+             controls 
+             autoplay>
+        <!-- ข้อความสำรอง กรณีเบราว์เซอร์ไม่รองรับ audio -->
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
 </body>
 </html>

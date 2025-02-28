@@ -1,0 +1,128 @@
+/* -------------------- */
+/* CSS เดิมของคุณ */
+/* -------------------- */
+
+/* พื้นหลังสีชมพู */
+body {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    background-color: #ffebf0; /* พื้นหลังนอกกรอบ */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  /* กรอบตรงกลาง */
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff66a3;
+    margin-bottom: 20px;
+  }
+  
+  /* ปุ่มเริ่มต้น (ถ้าใช้) */
+  .start-button {
+    background-color: #ff66a3;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+  }
+  .start-button:hover {
+    background-color: #ff3385;
+  }
+  
+  /* -------------------- */
+  /* CSS สำหรับ Cute Audio Player */
+  /* -------------------- */
+  
+  .cute-audio-player {
+    margin-top: 30px;              /* เว้นระยะห่างด้านบน */
+    background-color: #ffdde1;     /* พื้นหลังสีชมพูอ่อน */
+    border: 2px solid #ffc0cb;     /* ขอบสีชมพูเข้มเล็กน้อย */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  /* ส่วนแสดงข้อมูลเพลง */
+  .song-info {
+    margin-bottom: 10px;
+  }
+  .song-info h2 {
+    color: #b56576;
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  /* ปรับแต่ง audio element (ถ้าอยากทำให้เล็กลงหรือเปลี่ยนสีปุ่ม) */
+  .cute-audio-player audio {
+    width: 100%;
+    outline: none;
+    margin-top: 10px;
+    /* ถ้าอยากซ่อน default controls ไปทำปุ่มเอง ให้ใช้ display: none; แล้วเขียนปุ่มเองด้วย JS */
+  }
+  
+  /* -------------------- */
+  /* เพิ่ม CSS สำหรับ Input และ Analyze Button */
+  /* -------------------- */
+  
+  /* ตกแต่งช่อง input */
+  #userInput {
+    width: 70%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ffc0cb;
+    border-radius: 20px;
+    outline: none;
+    background-color: #fff0f5; /* ชมพูอ่อนอีกเฉด */
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    margin-bottom: 10px; /* เว้นช่องให้พอดีกับปุ่ม Analyze */
+    color: #333;
+    font-family: 'Press Start 2P', cursive; /* ให้สอดคล้องกับฟอนต์หลัก */
+  }
+  
+  /* เอฟเฟกต์เมื่อโฟกัสที่ช่อง input */
+  #userInput:focus {
+    border-color: #ff66a3;
+    box-shadow: 0 3px 12px rgba(255, 102, 163, 0.3);
+  }
+  
+  /* ปุ่ม Analyze (สามารถปรับชื่อคลาสหรือ id ตามต้องการ) */
+  button {
+    background-color: #ffb6c1;  /* ชมพูอ่อน */
+    border: none;
+    color: #fff;
+    padding: 10px 25px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    font-family: 'Press Start 2P', cursive; /* ให้เข้ากับธีม */
+  }
+  
+  /* เมื่อ hover ปุ่ม Analyze */
+  button:hover {
+    background-color: #ff66a3;  /* ชมพูเข้มขึ้น */
+    box-shadow: 0 4px 12px rgba(255, 102, 163, 0.4);
+  }
+  
