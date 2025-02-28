@@ -1,0 +1,76 @@
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+html, body {
+    background-color: #fbe7f4 !important;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    background-color: #fbe7f4 !important;
+     /* สีชมพู */
+    color: #333;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container {
+    max-width: 600px;
+    width: 90%; /* ให้ responsive */
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto; /* ทำให้ container อยู่ตรงกลาง */
+}
+
+
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff66a3;
+}
+.pixel-character {
+    width: 500px;
+    position: relative;
+    animation: float 1.5s infinite ease-in-out alternate;
+}
+@keyframes float {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
+.start-button {
+    background-color: #ff66a3;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+.start-button:hover {
+    background-color: #ff3385;
+}
+
+.title {
+    font-family: 'VT323', monospace;
+    font-size: 32px;
+  }
+  
